@@ -2,10 +2,10 @@
 
 from __future__ import absolute_import, print_function, division
 
-__version__ = '2.0.0'
-__title__ = 'gkit'
-__summary__ = 'Utilities and Tkinter widgets built out of necessity.'
-__uri__ = 'https://github.com/Gannon93/gkit_lib'
+__version__ = '1.0.0'
+__title__ = 'gkit_widgets'
+__summary__ = 'Tkinter widgets built out of necessity.'
+__uri__ = 'https://github.com/Gannon93/gkit_widgets'
 __author__ = 'Zach Gannon'
 __email__ = 'zachgannon93@gmail.com'
 __license__ = 'MIT'

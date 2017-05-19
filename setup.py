@@ -11,10 +11,6 @@ import codecs
 import sys
 import struct
 
-try:
-    import pip
-except ImportError:
-    pip = None
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 # sys.path.insert(0, os.path.join(HERE, 'gkit'))
@@ -39,7 +35,7 @@ def read(*parts):
     with codecs.open(os.path.join(HERE, *parts), 'rb', 'utf-8') as f:
         return f.read()
 
-META_FILE = read(*['gkit', '__about__.py'])
+META_FILE = read(*['gkit_widgets', '__about__.py'])
 
 
 def find_meta(meta):
