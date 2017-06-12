@@ -7,6 +7,7 @@ from .common.constants import *
 
 class MenuItem(object):
     """Class provides functionality for a menu item."""
+
     def __init__(self, parent, **kwargs):
         self.parent = parent
         self.type = None
@@ -75,8 +76,6 @@ class MenuItem(object):
         elif self.children:
             extra_val = self.children
             extra_key = 'Children'
-        msg = (
-            '\nType:\t\t{t}\nLabel:\t\t{l}\n{k}:\t{v}'
-            .format(t=self.type, l=self.label, k=extra_key, v=extra_val)
-        )
+        msg = ('\nType:\t\t{t}\nLabel:\t\t{l}\n{k}:\t{v}'.format(
+            t=self.type, l=self.label, k=extra_key, v=extra_val))
         return msg

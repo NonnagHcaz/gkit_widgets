@@ -12,6 +12,7 @@ from .common.constants import *
 class FramedEntry(tk.Frame):
     """Class provides a widget for an embedded entry box in a frame.
     """
+
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
         self.parent = parent
@@ -24,12 +25,8 @@ class FramedEntry(tk.Frame):
         tvar = tk.StringVar()
         if 'text' in kwargs:
             tvar.set(kwargs['text'])
-        entry = tk.Entry(
-            frame, textvariable=tvar, **entry_ops
-        )
-        button = tk.Button(
-            frame, command=frame.destroy, **button_ops
-        )
+        entry = tk.Entry(frame, textvariable=tvar, **entry_ops)
+        button = tk.Button(frame, command=frame.destroy, **button_ops)
         entry.pack(expand=1, side='left', fill=tk.X)
         button.pack(expand=1, side='right', fill=tk.X)
 

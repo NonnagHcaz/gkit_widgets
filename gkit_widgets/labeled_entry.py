@@ -21,29 +21,21 @@ class LabeledEntry(tk.Frame):
         Label: ['l']
         Entry: ['e']
     """
+
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
         self.parent = parent
 
         frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, 'f')
-        frame = tk.Frame(
-            self,
-            frame_ops
-        )
+        frame = tk.Frame(self, frame_ops)
         frame.pack(fill='both', expand=True)
 
         label_ops = funcs.extract_args(kwargs, LABEL_KEYS, 'l')
-        label = tk.Label(
-            frame,
-            label_ops
-        )
+        label = tk.Label(frame, label_ops)
         tvar = tk.StringVar()
         entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, 'e')
         entry_ops['textvariable'] = tvar
-        entry = tk.Entry(
-            frame,
-            entry_ops
-        )
+        entry = tk.Entry(frame, entry_ops)
 
         label.pack(side='top', fill='x', expand=True)
         entry.pack(side='bottom', fill='x', expand=True)

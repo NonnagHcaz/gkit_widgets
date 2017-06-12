@@ -7,7 +7,6 @@ except ImportError:
     import tkinter as tk
     import tkinter.filedialog as tkFile
 
-
 from .common import funcs
 from .common.constants import *
 
@@ -25,6 +24,7 @@ class AttachmentFrame(tk.Frame):
         row_num (int): Description
         wid_list (list): Description
     """
+
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
         self.parent = parent
@@ -40,26 +40,16 @@ class AttachmentFrame(tk.Frame):
             'scrollbar': scrollbar_ops
         }
 
-        frame = tk.Frame(
-            self, **frame_ops
-        )
+        frame = tk.Frame(self, **frame_ops)
         frame.grid(sticky='NEWS')
 
         button_add_row = tk.Button(
-            frame, command=self.add_row, text='Attach File',
-            **button_ops
-        )
-        button_add_row.grid(
-            row=0, column=0, sticky='NEWS'
-        )
+            frame, command=self.add_row, text='Attach File', **button_ops)
+        button_add_row.grid(row=0, column=0, sticky='NEWS')
 
         button_purge_rows = tk.Button(
-            frame, command=self.purge_rows, text='Remove All',
-            **button_ops
-        )
-        button_purge_rows.grid(
-            row=0, column=1, sticky='NEWS'
-        )
+            frame, command=self.purge_rows, text='Remove All', **button_ops)
+        button_purge_rows.grid(row=0, column=1, sticky='NEWS')
         # button_list_rows = tk.Button(
         #     frame, command=self.list_rows, text='List All',
         #     **button_ops
@@ -99,19 +89,16 @@ class AttachmentFrame(tk.Frame):
             new_frame.pack(expand=1, fill=tk.BOTH)
             new_tvar = tk.StringVar()
             new_tvar.set(filename)
-            new_entry = tk.Entry(
-                new_frame, textvariable=new_tvar, **entry_ops
-            )
+            new_entry = tk.Entry(new_frame, textvariable=new_tvar, **entry_ops)
             new_button = tk.Button(
-                new_frame, command=new_frame.destroy, text='Remove',
-                **button_ops
-            )
+                new_frame,
+                command=new_frame.destroy,
+                text='Remove',
+                **button_ops)
             new_entry.pack(expand=1, side='left', fill=tk.BOTH)
             new_button.pack(expand=1, side='right', fill=tk.X)
 
-            new_frame.grid(
-                row=self.row_num, column=0, sticky='NEWS'
-            )
+            new_frame.grid(row=self.row_num, column=0, sticky='NEWS')
             new_frame.get = new_entry.get
             new_frame.columnconfigure(0, weight=2)
             new_frame.columnconfigure(1, weight=1)

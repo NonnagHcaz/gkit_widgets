@@ -54,15 +54,11 @@ class MenuBar(tk.Menu):
 
             if menuitem.type.upper() in 'CASCADE':
                 new_menu = self.build_cascade(menuitem)
-                self.menubar.add_cascade(
-                    label=menuitem.label,
-                    menu=new_menu
-                )
+                self.menubar.add_cascade(label=menuitem.label, menu=new_menu)
             elif menuitem.type.upper() in 'COMMAND':
                 self.menubar.add_command(
                     label=menuitem.label,
-                    command=self.commands[menuitem.command]
-                )
+                    command=self.commands[menuitem.command])
 
     def build_cascade(self, menuitem):
         """Summary
@@ -85,22 +81,17 @@ class MenuBar(tk.Menu):
                 child = MenuItem(parent=cascitem, **children.popleft())
                 if child.children:
                     new_menu = self.build_cascade(child)
-                    cascitem.add_cascade(
-                        label=child.label,
-                        menu=new_menu
-                    )
+                    cascitem.add_cascade(label=child.label, menu=new_menu)
                 elif child.type.upper() in 'COMMAND':
                     cascitem.add_command(
                         label=child.label,
-                        command=self.commands[child.command]
-                    )
+                        command=self.commands[child.command])
                 elif child.type.upper() in 'RADIOBUTTON':
                     cascitem.add(
                         itemType='radiobutton',
                         label=child.label,
                         command=self.commands[child.command],
-                        variable=var
-                    )
+                        variable=var)
             else:
                 done = True
         return cascitem

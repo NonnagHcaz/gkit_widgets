@@ -100,6 +100,7 @@ def split_entry(instr, pattern=r"[-?\w']+"):
     """
     return re.findall(pattern, instr)
 
+
 ###############################################################################
 
 
@@ -124,10 +125,10 @@ def extract_args(all_args, valid_keys, prefix=''):
                     kwargs[attr] = attr_val
     return kwargs
 
+
 ###############################################################################
 
 
 def dummy():
     """<FRESHLY_INSERTED>"""
     pass
-

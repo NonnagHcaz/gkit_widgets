@@ -22,6 +22,7 @@ class ConsoleWindow(tk.Frame):
         Scrollbar: ['sb']
 
     """
+
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
 
@@ -29,11 +30,7 @@ class ConsoleWindow(tk.Frame):
         text = tk.Text(self, **text_ops)
 
         scrollbar_ops = funcs.extract_args(kwargs, SCROLLBAR_KEYS, 'sb')
-        vsb = tk.Scrollbar(
-            self,
-            command=text.yview,
-            **scrollbar_ops
-        )
+        vsb = tk.Scrollbar(self, command=text.yview, **scrollbar_ops)
         text.configure(yscrollcommand=vsb.set)
         vsb.pack(side="right", fill="y")
         text.pack(side="left", fill="both", expand=True)

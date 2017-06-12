@@ -6,7 +6,6 @@ import sys
 cwd = os.getcwd()
 sys.path.insert(0, cwd)
 
-
 from .attachment_frame import AttachmentFrame
 from .console_window import ConsoleWindow
 from .framed_entry import FramedEntry

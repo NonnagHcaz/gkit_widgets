@@ -36,11 +36,11 @@ RADIOBUTTON_KEY = 'RADIOBUTTON'
 # Button
 # http://effbot.org/tkinterbook/button.htm
 BUTTON_KEYS = [
-    'activebackground', 'activeforeground', 'anchor', 'background',
-    'bg', 'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor',
-    'default', 'disabledforeground', 'font', 'foreground', 'fg', 'height',
-    'highlightbackground', 'highlightcolor', 'highlightthickness',
-    'image', 'justify', 'overrelief', 'padx', 'pady', 'relief', 'repeatdelay',
+    'activebackground', 'activeforeground', 'anchor', 'background', 'bg',
+    'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor', 'default',
+    'disabledforeground', 'font', 'foreground', 'fg', 'height',
+    'highlightbackground', 'highlightcolor', 'highlightthickness', 'image',
+    'justify', 'overrelief', 'padx', 'pady', 'relief', 'repeatdelay',
     'repeatinterval', 'state', 'takefocus', 'text', 'textvariable',
     'underline', 'width', 'wraplength'
 ]
@@ -49,72 +49,66 @@ BUTTON_KEYS = [
 # http://effbot.org/tkinterbook/canvas.htm
 CANVAS_KEYS = [
     'background', 'bg', 'borderwidth', 'bd', 'closeenough', 'confine',
-    'cursor', 'height' 'highlightbackground', 'highlightcolor',
-    'highlightthickness', 'insertbackground', 'insertborderwidth',
-    'insertofftime', 'insertontime', 'insertwidth', 'offset', 'relief',
-    'scrollregion', 'selectbackground', 'selectborderwidth',
-    'selectforeground', 'state', 'takefocus', 'width', 'xscrollcommand',
-    'xscrollincrement', 'yscrollcommand', 'yscrollincrement'
+    'cursor', 'height'
+    'highlightbackground', 'highlightcolor', 'highlightthickness',
+    'insertbackground', 'insertborderwidth', 'insertofftime', 'insertontime',
+    'insertwidth', 'offset', 'relief', 'scrollregion', 'selectbackground',
+    'selectborderwidth', 'selectforeground', 'state', 'takefocus', 'width',
+    'xscrollcommand', 'xscrollincrement', 'yscrollcommand', 'yscrollincrement'
 ]
 
 # Checkbutton
 # http://effbot.org/tkinterbook/checkbutton.htm
 CHECKBUTTON_KEYS = [
-    'activebackground', 'activeforeground', 'anchor', 'background',
-    'bg', 'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor',
+    'activebackground', 'activeforeground', 'anchor', 'background', 'bg',
+    'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor',
     'disabledforeground', 'font', 'foreground', 'fg', 'height',
-    'highlightbackground', 'highlightcolor', 'highlightthickness',
-    'image', 'indicatoron', 'justify', 'offrelief', 'offvalue', 'onvalue',
-    'overrelief', 'padx', 'pady', 'relief', 'selectcolor', 'selectimage',
-    'state', 'takefocus', 'text', 'textvariable', 'underline', 'variable',
-    'width', 'wraplength'
+    'highlightbackground', 'highlightcolor', 'highlightthickness', 'image',
+    'indicatoron', 'justify', 'offrelief', 'offvalue', 'onvalue', 'overrelief',
+    'padx', 'pady', 'relief', 'selectcolor', 'selectimage', 'state',
+    'takefocus', 'text', 'textvariable', 'underline', 'variable', 'width',
+    'wraplength'
 ]
 
 # Entry
 # http://effbot.org/tkinterbook/entry.htm
 ENTRY_KEYS = [
-    'background', 'bg', 'borderwidth', 'bd', 'cursor',
-    'diabledbackground', 'disabledforeground', 'exportselection',
-    'font', 'foreground', 'fg', 'highlightbackground',
-    'highlightcolor', 'highlightthickness', 'insertbackground',
-    'insertborderwidth', 'insertofftime', 'insertontime',
+    'background', 'bg', 'borderwidth', 'bd', 'cursor', 'diabledbackground',
+    'disabledforeground', 'exportselection', 'font', 'foreground', 'fg',
+    'highlightbackground', 'highlightcolor', 'highlightthickness',
+    'insertbackground', 'insertborderwidth', 'insertofftime', 'insertontime',
     'insertwidth', 'justify', 'readonlybackground', 'relief',
-    'selectbackground', 'selectborderwidth', 'selectforeground',
-    'show', 'state', 'takefocus', 'textvariable', 'validate',
-    'validatecommand', 'vcmd', 'width', 'xscrollcommand'
+    'selectbackground', 'selectborderwidth', 'selectforeground', 'show',
+    'state', 'takefocus', 'textvariable', 'validate', 'validatecommand',
+    'vcmd', 'width', 'xscrollcommand'
 ]
 
 # Frame
 # http://effbot.org/tkinterbook/frame.htm
 FRAME_KEYS = [
-    'background', 'bg', 'borderwidth', 'bd', 'colormap', 'container',
-    'cursor', 'height', 'highlightbackground', 'highlightcolor',
-    'highlightthickness', 'padx', 'pady', 'relief', 'takefocus',
-    'visual', 'width'
+    'background', 'bg', 'borderwidth', 'bd', 'colormap', 'container', 'cursor',
+    'height', 'highlightbackground', 'highlightcolor', 'highlightthickness',
+    'padx', 'pady', 'relief', 'takefocus', 'visual', 'width'
 ]
 
 # Label
 # http://effbot.org/tkinterbook/label.htm
 LABEL_KEYS = [
-    'activebackground', 'activeforeground', 'anchor', 'background',
-    'bg', 'bitmap', 'borderwidth', 'bd', 'compound', 'cursor',
-    'disabledforeground', 'font', 'foreground', 'fg', 'height',
-    'highlightbackground', 'highlightcolor', 'highlightthickness',
-    'image', 'justify', 'padx', 'pady', 'relief', 'state', 'takefocus',
-    'text', 'textvariable', 'underline', 'width', 'wraplength'
+    'activebackground', 'activeforeground', 'anchor', 'background', 'bg',
+    'bitmap', 'borderwidth', 'bd', 'compound', 'cursor', 'disabledforeground',
+    'font', 'foreground', 'fg', 'height', 'highlightbackground',
+    'highlightcolor', 'highlightthickness', 'image', 'justify', 'padx', 'pady',
+    'relief', 'state', 'takefocus', 'text', 'textvariable', 'underline',
+    'width', 'wraplength'
 ]
 
 # LabelFrame
 # http://effbot.org/tkinterbook/labelframe.htm
-LABELFRAME_KEYS = [
-
-]
+LABELFRAME_KEYS = []
 
 # Listbox
 # http://effbot.org/tkinterbook/listbox.htm
-LISTBOX_KEYS = [
-
-]
+LISTBOX_KEYS = []
 
 # Menu
 # http://effbot.org/tkinterbook/menu.htm
@@ -144,14 +138,13 @@ PANEDWINDOW_KEYS = []
 # Radiobutton
 # http://effbot.org/tkinterbook/radiobutton.htm
 RADIOBUTTON_KEYS = [
-    'activebackground', 'activeforeground', 'anchor', 'background',
-    'bg', 'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor',
+    'activebackground', 'activeforeground', 'anchor', 'background', 'bg',
+    'bitmap', 'borderwidth', 'bd', 'command', 'compound', 'cursor',
     'disabledforeground', 'font', 'foreground', 'fg', 'height',
-    'highlightbackground', 'highlightcolor', 'highlightthickness',
-    'image', 'indicatoron', 'justify', 'offrelief',
-    'overrelief', 'padx', 'pady', 'relief', 'selectcolor', 'selectimage',
-    'state', 'takefocus', 'text', 'textvariable', 'underline', 'value',
-    'variable', 'width', 'wraplength'
+    'highlightbackground', 'highlightcolor', 'highlightthickness', 'image',
+    'indicatoron', 'justify', 'offrelief', 'overrelief', 'padx', 'pady',
+    'relief', 'selectcolor', 'selectimage', 'state', 'takefocus', 'text',
+    'textvariable', 'underline', 'value', 'variable', 'width', 'wraplength'
 ]
 
 # Scale
@@ -178,10 +171,10 @@ TEXT_KEYS = [
     'exportselection', 'font', 'foreground', 'fg', 'height',
     'highlightbackground', 'highlightcolor', 'highlightthickness',
     'insertbackground', 'insertborderwidth', 'insertofftime', 'insertontime',
-    'insertwidth', 'maxundo', 'padx', 'pady', 'relief',
-    'selectbackground', 'selectborderwidth', 'selectforeground',
-    'setgrid', 'spacing1', 'spacing2', 'spacing3', 'state', 'tabs',
-    'takefocus', 'undo', 'width', 'wrap', 'xscrollcommand', 'yscrollcommand'
+    'insertwidth', 'maxundo', 'padx', 'pady', 'relief', 'selectbackground',
+    'selectborderwidth', 'selectforeground', 'setgrid', 'spacing1', 'spacing2',
+    'spacing3', 'state', 'tabs', 'takefocus', 'undo', 'width', 'wrap',
+    'xscrollcommand', 'yscrollcommand'
 ]
 
 # Toplevel
