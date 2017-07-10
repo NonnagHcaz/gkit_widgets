@@ -8,26 +8,10 @@ except ImportError:
 import re
 import os
 import codecs
-import sys
-import struct
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-# sys.path.insert(0, os.path.join(HERE, 'gkit'))
-
-DEPENDENCY_LINKS = []
-
-PYVER = sys.version_info
-PYPLAT = sys.platform
-PY2_MIN = (2, 7)
-PY2_MAX = (2, 7)
-PY3_MIN = (3, 4)
-PY3_MAX = (3, 6)
 
 ###############################################################################
-
-
-def is_python_64bit():
-    return struct.calcsize("P") == 8
 
 
 def read(*parts):
@@ -35,7 +19,7 @@ def read(*parts):
         return f.read()
 
 
-META_FILE = read(* ['gkit_widgets', '__about__.py'])
+META_FILE = read(* ['docs', '__about__.py'])
 
 
 def find_meta(meta):
@@ -50,7 +34,7 @@ def find_meta(meta):
 
 
 setup(
-    name='gkit_widgets',
+    name=find_meta('title'),
     version=find_meta('version'),
     url=find_meta('uri'),
     license=find_meta('license'),
@@ -59,16 +43,10 @@ setup(
     description=find_meta('summary'),
     maintainer=find_meta('author'),
     maintainer_email=find_meta('email'),
-    keywords=['Tkinter', 'widgets'],
-    long_description=read('README.rst'),
+    keywords=[],
+    long_description=read(* ['docs', 'README.rst']),
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     zip_safe=False,
-    classifiers=[
-        'Natural Language :: English',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Topic :: Software Development :: Libraries :: Python Modules'
-    ],
+    classifiers=find_meta('classifiers').split('\n'),
     include_package_data=True,
-    test_suite='tests', )
+    test_suite='tests')
