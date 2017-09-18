@@ -22,13 +22,6 @@ Attributes:
     TOPLEVEL_KEYS (TYPE): Description
 """
 
-# from gkit.attachment_frame import AttachmentFrame
-# from gkit.console_window import ConsoleWindow
-# from gkit.framed_entry import FramedEntry
-# from gkit.labeled_entry import LabeledEntry
-# from gkit.menu_item import MenuItem
-# from gkit.menu_bar import MenuBar
-
 COMMAND_KEY = 'COMMAND'
 CASCADE_KEY = 'CASCADE'
 RADIOBUTTON_KEY = 'RADIOBUTTON'

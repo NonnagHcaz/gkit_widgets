@@ -1,11 +1,9 @@
 """Module provides functionality for a menu bar."""
 from __future__ import absolute_import, print_function, division
-try:
-    import Tkinter as tk
-    import tkFileDialog as tkFile
-except ImportError:
-    import tkinter as tk
-    import tkinter.filedialog as tkFile
+
+import six.moves.tkinter as tk
+import six.moves.tkinter_filedialog as tkFile
+
 from collections import deque
 
 from .common import funcs

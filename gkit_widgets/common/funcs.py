@@ -1,14 +1,12 @@
 from __future__ import print_function
 
+from __future__ import absolute_import
 import os
 import re
 import json
 from collections import OrderedDict
 
-try:
-    import Tkinter as tk
-except ImportError:
-    import tkinter as tk
+import six.moves.tkinter as tk
 
 
 def read_json(file_path, encoding='UTF-8', ordered=True):

@@ -1,7 +1,6 @@
 """Module provides functionalty for a menu item."""
 from __future__ import absolute_import, print_function, division
 
-from .common import funcs
 from .common.constants import *
 
 
