@@ -1,8 +1,11 @@
 """Module provides functionality for an attachment frame in an email editor."""
 from __future__ import absolute_import, print_function, division
-
-import six.moves.tkinter as tk
-import six.moves.tkinter_filedialog as tkFile
+try:
+    import six.moves.tkinter as tk
+    import six.moves.tkinter_filedialog as tkFile
+except ImportError:
+    import tkinter as tk
+    import tkinter.filedialog as tkFile
 
 from .common import funcs
 from .common.constants import *
