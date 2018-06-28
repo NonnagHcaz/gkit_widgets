@@ -1,7 +1,7 @@
 Gannon Toolkit Library - Widgets (gkit_widgets)
 ===============================================
 
-[![Build Status](https://travis-ci.org/gannon93/gkit_widgets.svg?branch=master)](https://travis-ci.org/gannon93/gkit_lib)
+[![Travis - Linux](https://img.shields.io/travis/NonnageHcaz/gkit_widgets.svg?label=Linux%20Status)](https://travis-ci.org/NonnageHcaz/gkit_widgets)
 
 Written by Zachary Gannon.  
 Adapted from Tkinter/Tcl 8.5 widgets.  
