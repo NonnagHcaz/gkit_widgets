@@ -7,7 +7,7 @@ from .common import funcs
 from .common.constants import *
 
 
-class LabeledEntry(tk.Frame):
+class LabeledRadios(tk.Frame):
     """Custom labeled entry contained by a frame.
 
     Class Extensions:
@@ -20,9 +20,10 @@ class LabeledEntry(tk.Frame):
         Entry: ['e']
     """
 
-    def __init__(self, parent, placeholder='', **kwargs):
+    def __init__(self, parent, radio_config, *args, **kwargs):
         tk.Frame.__init__(self, parent)
         self.parent = parent
+        self.input_list = []
 
         frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, FRAME_KEY)
         frame = tk.Frame(self, frame_ops)
@@ -30,26 +31,32 @@ class LabeledEntry(tk.Frame):
 
         label_ops = funcs.extract_args(kwargs, LABEL_KEYS, LABEL_KEY)
         label = tk.Label(frame, label_ops)
+
         tvar = tk.StringVar()
-        entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, ENTRY_KEY)
-        entry_ops['textvariable'] = tvar
-        self.entry = tk.Entry(frame, entry_ops)
 
         label.pack(side='top', fill='x', expand=True)
-        self.entry.pack(side='bottom', fill='x', expand=True)
-        # self.entry.focus_force()
-        self.parent.columnconfigure(0, weight=1)
-        self.insert = self.entry.insert
-        self.delete = self.entry.delete
-        self.get = self.entry.get
-        self.set = tvar.set
-        self.index = self.entry.index
-        self.bind = self.entry.bind
-        # self.state = lambda: change_state(self.entry)
-        self.enable = lambda: funcs.set_state_normal(self.entry)
-        self.normal = lambda: funcs.set_state_normal(self.entry)
-        self.disable = lambda: funcs.set_state_disabled(self.entry)
-        self.clear = lambda: funcs.clear(self.entry)
 
-    def add_placeholder_to(self, placeholder, color="grey", font=None):
-        funcs.add_placeholder_to(self.entry, placeholder, color, font)
+        for radio_kwargs in radio_config:
+            radio_ops = funcs.extract_args(
+                radio_kwargs, RADIOBUTTON_KEYS, RADIOBUTTON_KEY)
+            radio_ops['variable'] = tvar
+            this_radio = tk.Radiobutton(frame, radio_ops)
+            this_radio.pack(side='left', fill='x', expand=True)
+            self.input_list.append(this_radio)
+
+        self.parent.columnconfigure(0, weight=1)
+        self.get = tvar.get
+        self.set = tvar.set
+        # self.state = lambda: change_state(self.entry)
+        self.enable = self._enable
+        self.normal = self._enable
+        self.disable = self._disable
+        self.clear = lambda: funcs.clear(entry)
+
+    def _enable(self):
+        for widget in self.input_list:
+            funcs.set_state_normal(widget)
+
+    def _disable(self):
+        for widget in self.input_list:
+            funcs.set_state_disabled(widget)

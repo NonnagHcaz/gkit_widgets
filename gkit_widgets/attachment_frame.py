@@ -1,11 +1,8 @@
 """Module provides functionality for an attachment frame in an email editor."""
 from __future__ import absolute_import, print_function, division
-try:
-    import six.moves.tkinter as tk
-    import six.moves.tkinter_filedialog as tkFile
-except ImportError:
-    import tkinter as tk
-    import tkinter.filedialog as tkFile
+
+import six.moves.tkinter as tk
+import six.moves.tkinter_filedialog as tkFile
 
 from .common import funcs
 from .common.constants import *
@@ -29,10 +26,11 @@ class AttachmentFrame(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.parent = parent
 
-        frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, 'f')
-        entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, 'e')
-        button_ops = funcs.extract_args(kwargs, BUTTON_KEYS, 'b')
-        scrollbar_ops = funcs.extract_args(kwargs, SCROLLBAR_KEYS, 'sb')
+        frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, FRAME_KEY)
+        entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, ENTRY_KEY)
+        button_ops = funcs.extract_args(kwargs, BUTTON_KEYS, BUTTON_KEY)
+        scrollbar_ops = funcs.extract_args(
+            kwargs, SCROLLBAR_KEYS, SCROLLBAR_KEY)
         self.ops = {
             'frame': frame_ops,
             'entry': entry_ops,

@@ -24,10 +24,11 @@ class ConsoleWindow(tk.Frame):
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
 
-        text_ops = funcs.extract_args(kwargs, TEXT_KEYS, 't')
+        text_ops = funcs.extract_args(kwargs, TEXT_KEYS, TEXT_KEY)
         text = tk.Text(self, **text_ops)
 
-        scrollbar_ops = funcs.extract_args(kwargs, SCROLLBAR_KEYS, 'sb')
+        scrollbar_ops = funcs.extract_args(
+            kwargs, SCROLLBAR_KEYS, SCROLLBAR_KEY)
         vsb = tk.Scrollbar(self, command=text.yview, **scrollbar_ops)
         text.configure(yscrollcommand=vsb.set)
         vsb.pack(side="right", fill="y")

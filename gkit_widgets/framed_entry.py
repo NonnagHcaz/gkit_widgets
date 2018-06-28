@@ -14,9 +14,9 @@ class FramedEntry(tk.Frame):
     def __init__(self, parent, **kwargs):
         tk.Frame.__init__(self, parent)
         self.parent = parent
-        frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, 'f')
-        entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, 'e')
-        button_ops = funcs.extract_args(kwargs, BUTTON_KEYS, 'b')
+        frame_ops = funcs.extract_args(kwargs, FRAME_KEYS, FRAME_KEY)
+        entry_ops = funcs.extract_args(kwargs, ENTRY_KEYS, ENTRY_KEY)
+        button_ops = funcs.extract_args(kwargs, BUTTON_KEYS, BUTTON_KEY)
 
         frame = tk.Frame(self, **frame_ops)
         frame.pack(expand=1, fill=tk.BOTH)
